@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .range-slider {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .range-slider label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .range-slider input[type="range"] {
+      width: 100%;
+    }
+
+    .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .submit-button input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .reset-button input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #f44336;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Chào mừng bạn đến với tạp chí HTML5 & CSS3</h1>
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="city">Thành phố:</label>
+      <input type="text" id="city" name="city" required>
+    </div>
+
+    <div class="range-slider">
+      <label for="age">Độ tuổi trung bình:</label>
+      <input type="range" id="age" name="age" min="18" max="60" step="1" value="30">
+    </div>
+
+    <div class="checkbox-group">
+      <label>Chủ đề muốn theo dõi:</label>
+      <label><input type="checkbox" name="topics" value="HTML5 Cơ bản"> HTML5 Cơ bản</label>
+<label><input type="checkbox" name="topics" value="HTML5 Nâng cao"> HTML5 Nâng cao</label>
+      <label><input type="checkbox" name="topics" value="CSS3 Cơ bản"> CSS3 Cơ bản</label>
+      <label><input type="checkbox" name="topics" value="CSS3 Nâng cao"> CSS3 Nâng cao</label>
+    </div>
+
+    <div class="submit-button">
+      <input type="submit" value="Đăng ký">
+    </div>
+
+    <div class="reset-button">
+      <inputtype="reset" value="Làm lại">
+    </div>
+  </form>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+      var city = document.getElementById('city').value;
+      var age = document.getElementById('age').value;
+      var topics = document.querySelectorAll('input[name="topics"]:checked');
+      var selectedTopics = [];
+      for (var i = 0; i < topics.length; i++) {
+        selectedTopics.push(topics[i].value);
+      }
+
+      alert("Thông tin đã được gửi:\n\nTên đăng nhập: " + username + "\nMật khẩu: " + password + "\nEmail: " + email + "\nThành phố: " + city + "\nĐộ tuổi trung bình: " + age + "\nChủ đề muốn theo dõi: " + selectedTopics.join(", "));
+    });
+
+    document.getElementById('registrationForm').addEventListener('reset', function() {
+      
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('city').value = '';
+      document.getElementById('age').value = '30';
+      var topics = document.querySelectorAll('input[name="topics"]');
+      for (var i = 0; i < topics.length; i++) {
+        topics[i].checked = false;
+      }
+    });
+  </script>
+</body>
+</html>

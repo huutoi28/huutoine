@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .form-title {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="form-title">Form Đăng ký Tham gia Chương trình Khuyến mại</h2>
+    <form>
+      <div class="form-group">
+        <label for="full-name">Họ tên:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Điện thoại:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Giới tính:</label>
+        <select id="gender" name="gender" required>
+          <option value="">-- Chọn giới tính --</option>
+          <option value="male">Nam</option>
+          <option value="female">Nữ</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="occupation">Nghề nghiệp:</label>
+        <input type="text" id="occupation" name="occupation" required>
+      </div>
+      <div class="form-group">
+        <label for="product">Sản phẩm:</label>
+        <select id="product" name="product" required>
+          <option value="">-- Chọn sản phẩm --</option>
+          <option value="product1">Kem đánh răng</option>
+          <option value="product2">Bột giặt</option>
+          <option value="product3">Dầu gội đầu</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Đồng ý">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

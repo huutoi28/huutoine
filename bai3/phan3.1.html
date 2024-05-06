@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng nhập</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+      background-color: #f1f1f1 ;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #08c5e6;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #10e979;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function displayUsername() {
+      var username = document.getElementById("username").value;
+      var message = document.getElementById("message");
+      message.innerHTML = "Xin chào, " + username + "! Bạn đã đăng nhập thành công.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Đăng nhập</h1>
+  <form>
+    <label for="username">Mã người dùng:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="password">Mật khẩu:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <input type="button" value="Đồng ý" onclick="displayUsername()">
+  </form>
+  
+  <p id="message"></p>
+</body>
+</html>

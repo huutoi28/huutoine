@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang web mẫu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #B0E0E6; /* Màu xanh dương nhạt */
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff; /* Màu nền cho phần giao diện */
+    }
+
+    .container h2 {
+      text-align: center;
+    }
+
+    .container form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .container form input[type="text"],
+    .container form input[type="email"],
+    .container form input[type="password"],
+    .container form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+
+    .container form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng nhập</h2>
+    <form action="/login" method="post">
+      <label for="loginEmailOrPhone">Email hoặc số điện thoại:</label>
+      <input type="text" id="loginEmailOrPhone" name="loginEmailOrPhone" required>
+
+      <label for="loginPassword">Mật khẩu:</label>
+      <input type="password" id="loginPassword" name="loginPassword" required>
+
+      <input type="submit" value="Đăng nhập">
+    </form>
+
+    <h2>Đăng ký tài khoản</h2>
+    <form action="/register" method="post">
+      <label for="fullName">Họ và tên:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="gender">Giới tính:</label>
+      <select id="gender" name="gender" required>
+        <option value="nam">Nam</option>
+        <option value="nu">Nữ</option>
+      </select>
+
+      <label for="birthdate">Ngày tháng năm sinh:</label>
+      <input type="date" id="birthdate" name="birthdate" required>
+
+      <label for="registerEmail">Email:</label>
+      <input type="email" id="registerEmail" name="registerEmail" required>
+
+      <label for="registerPassword">Mật khẩu:</label>
+      <input type="password" id="registerPassword" name="registerPassword" required>
+
+      <input type="submit" value="Đăng ký">
+    </form>
+  </div>
+</body>
+</html>

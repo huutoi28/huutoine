@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-title {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group .transport-option {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .form-group .transport-option label {
+      display: block;
+      text-align: center;
+    }
+
+    .form-group .transport-option input[type="checkbox"] {
+      display: none;
+    }
+
+    .form-group .transport-option input[type="checkbox"] + label {
+      position: relative;
+      padding-left: 35px;
+      cursor: pointer;
+    }
+
+    .form-group .transport-option input[type="checkbox"] + label::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 25px;
+      height: 25px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group .transport-option input[type="checkbox"]:checked + label::before {
+      background-color: #4CAF50;
+    }
+
+    .form-group .transport-option input[type="checkbox"]:checked + label::after {
+      content: "\f00c";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      color: white;
+    }
+    
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="form-title">Form Đăng ký Tour du lịch</h2>
+    <form>
+      <div class="form-group">
+        <label for="full-name">Họ tên:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Địa chỉ:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Điện thoại:</label>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label>Chọn tour:</label>
+        <select required>
+          <option value="">-- Chọn tour --</option>
+          <option value="tour1">Tour đi Hà Giang</option>
+          <option value="tour2">Tour đi Cao Bằng</option>
+          <option value="tour3">Tour đi Lạng Sơn</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Phương tiện:</label>
+        <div class="transport-option">
+          <input type="checkbox" id="transport-car" name="transport-car" value="car">
+          <label for="transport-car">Xe ô tô</label>
+        </div>
+        <div class="transport-option">
+          <input type="checkbox" id="transport-bus" name="transport-bus" value="bus">
+          <label for="transport-bus">Xe buýt</label>
+        </div>
+        <div class="transport-option">
+          <input type="checkbox" id="transport-train"```html
+<input type="checkbox" id="transport-train" name="transport-train" value="train">
+          <label for="transport-train">Tàu hỏa</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Đồng ý">
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Đăng ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 5px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container form label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .container form input[type="text"],
+    .container form input[type="password"],
+    .container form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .container form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #6a7ec7;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .AA{
+        display: flex;
+    }
+    .container form .password-input {
+      font-family: "Courier New", monospace;
+    }
+
+    .container form .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .container form .checkbox-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+   
+    .container form .checkbox-group input[type="checkbox"] {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Form Đăng ký</h2>
+    <form action="/register" method="post">
+      <label for="fullName">Họ và tên:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" class="password-input" required>
+
+      <label for="gender">Giới tính:</label>
+      <select id="gender" name="gender" required>
+        <option value="male">Nam</option>
+        <option value="female">Nữ</option>
+        <option value="other">Khác</option>
+      </select>
+
+      <div class="checkbox-group">
+        <label>Ngôn ngữ lập trình:</label>
+        <div class="AA">
+          <input type="checkbox" id="javascript" name="programmingLanguages[]" value="javascript">
+          <label for="javascript">JavaScript</label>
+        </div>
+        <div class="AA">
+          <input type="checkbox" id="python" name="programmingLanguages[]" value="python">
+          <label for="python">Python</label>
+        </div>
+        <div class="AA">
+          <input type="checkbox" id="java" name="programmingLanguages[]" value="java">
+          <label for="java">Java</label>
+        </div>
+        <div class="AA">
+          <input type="checkbox" id="csharp" name="programmingLanguages[]" value="csharp">
+          <label for="csharp">C#</label>
+        </div>
+        <div class="AA"> 
+          <input type="checkbox" id="php" name="programmingLanguages[]" value="php">
+          <label for="php">PHP</label>
+        </div>
+      </div>
+
+      <label for="province">Tỉnh thành:</label>
+      <select id="province" name="province" required>
+        <option value="hanoi">Hà Nội</option>
+        <option value="hochiminh">Hồ Chí Minh</option>
+        <option value="danang">Đà Nẵng</option>
+        <option value="haiphong">Hải Phòng</option>
+        <option value="hue">Huế</option>
+      </select>
+      <div class="AA">
+        <input type="submit" value="Đăng ký">
+        <input  type="submit" value="Reset" style="margin-left: 20px;">
+      </div>
+      
+    </form>
+  </div>
+</body>
+</html>
